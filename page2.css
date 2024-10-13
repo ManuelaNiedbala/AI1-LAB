@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    background-image: url(Obraz/bambus.jpg);
+    background-color: #f5f7eb;
+    background-position: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "navbar navbar"
+        "main sidebar"
+        "article sidebar"
+        "gallery gallery"
+        "footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 4fr 1fr auto auto auto auto;
+    gap: 15px;
+    padding: 10px;
+    margin: 20px 100px;
+}
+
+.header {
+    grid-area: header;
+    background-image: url(Obraz/liscie2.jpg);
+    background-color: #344e41;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.header-content {
+    position: relative;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text-content {
+    color: white;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    text-align: left;
+    text-shadow: 4px 4px 4px black;
+    margin-right: 20px;
+}
+
+.header-content h1, 
+.header-content h2 {
+    margin: 0;
+}
+
+.header-content .logo {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 10px solid rgba(245, 247, 235, 0.06);
+}
+
+.header-content h1 {
+    font-size: 50px;
+    padding: 20px 50px 10px;
+}
+
+.header-content h2 {
+    font-size: 25px;
+    padding: 10px 50px 20px;
+}
+
+.navbar {
+    grid-area: navbar;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: #588157;
+    padding: 0px;
+    margin: 12px;
+    overflow: hidden;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 20px 0px;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #75a374;
+}
+
+.navbar li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.main {
+    grid-area: main;
+    background-color: #dad7cd;
+    border: 8px dashed #344e41;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.main h3 {
+    color: #d36135;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+.main p {
+    color: #344e41;
+    font-size: 20px;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.article {
+    grid-area: article;
+    background-color: #dad7cd;
+    border: 8px dashed #344e41;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.article h3 {
+    color: #d36135;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: Helvetica;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+.article p {
+    color: #344e41;
+    font-size: 20px;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #588157;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.sidebar h3 {
+    color: #283618;
+    background-color: #dda15e;
+    border: 10px #f5f7eb dotted;
+    border-radius: 10px;
+    font-size: 23px;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 30px 50px 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    color: #f2e8cf;
+    font-size: 22px;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 50px 10px;
+}
+
+.gallery {
+    grid-area: gallery;
+    display: flex;
+    justify-content: space-around;
+    background-color: #dda15e;
+    padding: 20px;
+    border: 10px #f5f7eb dotted;
+    border-radius: 15px;
+}
+
+.picture {
+    display: flex;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    width: 150%;
+    justify-content: center;
+    background: #dda15e;
+}
+
+.picture img {
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+    padding: 10px;
+}
+
+.picture img:hover {
+    cursor: pointer;
+    opacity: 50%;
+    transition: 0.5s;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #344e41;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer h4 {
+    text-align: left;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    color: #f2e8cf;
+}
+
+.footer a {
+    text-align: right;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    color: #f2e8cf;
+}
+
+
+@media (max-width: 768px) {
+
+    .container {
+        display: grid;
+        grid-template-areas: 
+            "header"
+            "navbar"
+            "sidebar"
+            "main"
+            "article"
+            "gallery"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto auto auto auto auto auto;
+        gap: 15px;
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .header-content h1{
+        font-size: 40px;
+        padding: 20px 50px 10px;
+    }
+
+    .text-content {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .header-content .logo {
+        margin-top: 10px;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .navbar ul{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    
+    .navbar li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar a{
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 20px 0px;
+        display: block;
+    }
+    
+    .picture img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+
