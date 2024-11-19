@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="leaflet-1.7.1/leaflet.css">
+    <script src="leaflet-1.7.1/leaflet-src.js"></script>
+    <script src="leaflet-1.7.1/leaflet-providers.js"></script>
+    <script src="leaflet-1.7.1/leaflet-image.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="map"></div>
+        <canvas id="mapa_rastrowa"></canvas>
+    
+        <div id="buttons">
+            <button id="getLocation" onclick="getLocation()">Pobierz lokalizację</button>
+            <button id="pobieranie">Pobierz mapę</button>
+        </div>
+    
+        <div id="locationInfo">
+            <strong>Latitude:</strong> <span id="latitude"></span><br>
+            <strong>Longitude:</strong> <span id="longitude"></span><br>
+        </div>
+
+        <div id="puzzleContainer">
+            <div id="puzzlePieces" class="item draggable" draggable="true"></div>
+        </div>
+    
+        <div id="puzzleBoard" class="grid"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
