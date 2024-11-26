@@ -62,7 +62,7 @@ const WeatherApp = class {
     }
 
     getWeather(query) {
-        this.locationNameBlock.innerText = query; // Set the location name
+        this.locationNameBlock.innerText = query;
         this.getCurrentWeather(query);
         this.getForecast(query);
     }
